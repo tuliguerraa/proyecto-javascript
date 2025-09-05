@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Sos económicamente funcional?</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>¿Sos económicamente funcional?</h1>
@@ -14,11 +16,95 @@
     <button id="ansiedadBtn"> Qué tan graves fueron hoy tus gastos hormiga?</button>
     <button id="horasBtn"> Cuantas horas de tu vida cuesta lo que queres?</button>
     <button id="independenciaBtn"> Estas preparado para independizarte?</button>
+    <button id="historialBtn"> Ver historial de mis compras </button>
 
     <div id="resultado"></div>
+
+    <section id="compras" class="container">
+      <h2>Compras hormiga</h2>
+
+      <form id="form-compra" class="grid">
+        <label>
+          Producto
+          <input name="producto" id="compra-producto" placeholder="Café, alfajor..." required />
+        </label>
+        <label>
+          Precio (ARS)
+          <input name="precio" id="compra-precio" type="number" step="0.01" min="0.01" required />
+        </label>
+
+        <button type="submit">Agregar</button>
+        <button type="button" id="vaciar-compras" class="secondary">Vaciar</button>
+      </form>
+
+      <ul id="lista-compras" class="list"></ul>
+      <p class="total">Total: <strong id="total-compras">$0</strong></p>
+    </section>
+
+    <section id="horas" class="container">
+      <h2>¿Cuántas horas de tu vida cuesta lo que queres?</h2>
+
+      <form id="form-horas" class="grid">
+        <label>
+          Sueldo mensual (ARS)
+          <input name="sueldo" id="h-sueldo" type="number" step="0.01" min="1" required />
+        </label>
+        <label>
+          Horas por día
+          <input name="horasDia" id="h-horasDia" type="number" step="0.1" min="1" required />
+        </label>
+        <label>
+          Días por semana
+          <input name="dias" id="h-dias" type="number" min="1" max="7" required />
+        </label>
+        <label>
+          Precio del objetivo (ARS)
+          <input name="precio" id="h-precio" type="number" step="0.01" min="1" required />
+        </label>
+
+        <button type="submit">Calcular</button>
+      </form>
+
+      <div id="resultado-horas" class="card"></div>
+    </section>
+
+    <section id="independencia" class="container">
+      <h2>Simulador de independencia</h2>
+
+      <form id="form-independencia" class="grid">
+        <label>
+          Ingresos mensuales (ARS)
+          <input name="ingresos" id="i-ingresos" type="number" step="0.01" min="0" required />
+        </label>
+        <label>
+          Alquiler (ARS)
+          <input name="alquiler" id="i-alquiler" type="number" step="0.01" min="0" required />
+        </label>
+      </form>
+
+      <form id="form-gasto" class="grid">
+        <label>
+          Gasto fijo (nombre)
+          <input name="nombre" id="g-nombre" placeholder="Comida, servicios..." />
+        </label>
+        <label>
+          Monto (ARS)
+          <input name="valor" id="g-valor" type="number" step="0.01" min="0" />
+        </label>
+        <button type="button" id="agregar-gasto">Agregar gasto</button>
+        <button type="button" id="limpiar-gastos" class="secondary">Limpiar gastos</button>
+      </form>
+
+      <ul id="lista-gastos" class="list"></ul>
+
+      <button id="calcular-independencia">Calcular independencia</button>
+
+      <div id="resultado-independencia" class="card"></div>
+    </section>
+
   </div>
 
   <script src="main.js"></script>
 </body>
-</html>
 
+</html>

@@ -41,3 +41,63 @@ button:hover {
   font-size: 18px;
   font-weight: bold;
 }
+
+.historial {
+  text-align: left;
+  max-width: 520px;
+  margin: 10px auto 0;
+  padding-left: 18px;
+}
+
+.historial li {
+  margin: 6px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.total {
+  font-size: 18px
+}
+
+button.secondary {
+  background: #e0e0e0;
+  color: #333
+}
+
+button.secondary:hover {
+  background: #cacaca
+}
+
+.delete-btn {
+  border: none;
+  background: #eee;
+  color: #333;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #ddd
+}
