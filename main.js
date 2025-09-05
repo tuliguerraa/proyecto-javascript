@@ -239,10 +239,7 @@ function onVaciarCompras() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const res = document.getElementById("resultado");
-
-
   document.getElementById("ansiedadBtn").addEventListener("click", simuladorAnsiedad);
   document.getElementById("horasBtn").addEventListener("click", simuladorHoras);
   document.getElementById("independenciaBtn").addEventListener("click", simuladorIndependencia);
